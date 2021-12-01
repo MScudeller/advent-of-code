@@ -1,4 +1,4 @@
-import 'day.dart';
+import '../day.dart';
 
 class Day01 implements Day {
   final List<int> _input;

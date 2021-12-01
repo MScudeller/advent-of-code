@@ -1,4 +1,4 @@
-import 'package:advent_of_code_2021/days/day.dart';
+import 'package:advent_of_code_2021/day.dart';
 
 void main(List<String> arguments) {
   Day day = Day(1);

@@ -1,33 +1,32 @@
 import 'dart:io';
 
-import 'day01.dart';
-import 'day02.dart';
-import 'day03.dart';
-import 'day04.dart';
-import 'day05.dart';
-import 'day06.dart';
-import 'day07.dart';
-import 'day08.dart';
-import 'day09.dart';
-import 'day10.dart';
-import 'day11.dart';
-import 'day12.dart';
-import 'day13.dart';
-import 'day14.dart';
-import 'day15.dart';
-import 'day16.dart';
-import 'day17.dart';
-import 'day18.dart';
-import 'day19.dart';
-import 'day20.dart';
-import 'day21.dart';
-import 'day22.dart';
-import 'day23.dart';
-import 'day24.dart';
-import 'day25.dart';
+import 'src/day01.dart';
+import 'src/day02.dart';
+import 'src/day03.dart';
+import 'src/day04.dart';
+import 'src/day05.dart';
+import 'src/day06.dart';
+import 'src/day07.dart';
+import 'src/day08.dart';
+import 'src/day09.dart';
+import 'src/day10.dart';
+import 'src/day11.dart';
+import 'src/day12.dart';
+import 'src/day13.dart';
+import 'src/day14.dart';
+import 'src/day15.dart';
+import 'src/day16.dart';
+import 'src/day17.dart';
+import 'src/day18.dart';
+import 'src/day19.dart';
+import 'src/day20.dart';
+import 'src/day21.dart';
+import 'src/day22.dart';
+import 'src/day23.dart';
+import 'src/day24.dart';
+import 'src/day25.dart';
 
 abstract class Day {
-
   factory Day(int dayNumber) {
     if (dayNumber < 0 || dayNumber > 25) {
       throw ArgumentError("Day must be between 1 and 25.", "dayNumber");
@@ -35,6 +34,10 @@ abstract class Day {
 
     var input = File('input/day${dayNumber.toString().padLeft(2, '0')}.txt')
         .readAsLinesSync();
+    return Day.input(dayNumber, input);
+  }
+
+  factory Day.input(int dayNumber, List<String> input) {
     switch (dayNumber) {
       case 1:
         return Day01(input);

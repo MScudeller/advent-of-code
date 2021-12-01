@@ -1,4 +1,4 @@
-import 'day.dart';
+import '../day.dart';
 
 class Day06 implements Day {
   final List<String> _input; // ignore: unused_field

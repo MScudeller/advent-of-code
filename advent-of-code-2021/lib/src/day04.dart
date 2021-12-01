@@ -1,9 +1,9 @@
-import 'day.dart';
+import '../day.dart';
 
-class Day21 implements Day {
+class Day04 implements Day {
   final List<String> _input; // ignore: unused_field
 
-  Day21(this._input);
+  Day04(this._input);
 
   @override
   part1() {
