@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5b437197-7cf4-4447-8cb0-976eb179d3e2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advent-of-code-2021.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis_options.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/advent_of_code_2021.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day01.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day02.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day03.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day04.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day05.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day06.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day07.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day08.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day09.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day10.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day11.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day12.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day13.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day14.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day15.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day16.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day17.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day18.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day19.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day20.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day21.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day22.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day23.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day24.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/days/day25.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="21fLbAL4vtkpzeTek6H8ficqxbn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/days" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\advent-of-code\advent-of-code-2021\lib\days" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\advent-of-code\advent-of-code-2021\lib" />
+      <recent name="D:\Projects\advent-of-code\advent-of-code-2021\bin\days" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Dart Command Line App.advent_of_code_2021.dart">
+    <configuration name="advent_of_code_2021.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="filePath" value="$PROJECT_DIR$/bin/advent_of_code_2021.dart" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Day01 in day01_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/day01_test.dart" />
+      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
+      <option name="testName" value="Day01" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in day01_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/day01_test.dart" />
+      <option name="testName" value="day01_test.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name=".part1 1st example in day01_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/day01_test.dart" />
+      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
+      <option name="testName" value=".part1 1st example" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Dart Test.Day01 in day01_test.dart" />
+        <item itemvalue="Dart Test.Tests in day01_test.dart" />
+        <item itemvalue="Dart Test..part1 1st example in day01_test.dart" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5b437197-7cf4-4447-8cb0-976eb179d3e2" name="Changes" comment="" />
+      <created>1638327267471</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638327267471</updated>
+      <workItem from="1638327268960" duration="1323000" />
+      <workItem from="1638328687035" duration="6911000" />
+    </task>
+    <task id="LOCAL-00001">
+      <created>1638337364555</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1638337364555</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/bin/advent_of_code_2021.dart</url>
+          <line>3</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
