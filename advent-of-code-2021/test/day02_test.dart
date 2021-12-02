@@ -8,13 +8,11 @@ void main() {
         2, ['forward 5', 'down 5', 'forward 8', 'up 3', 'down 8', 'forward 2']);
   });
   group('Day02', () {
-    group('.part1', () {
-      test('.part1 1st example', () {
-        expect(day.part1(), 150);
-      });
-      test('.part2 1st example', () {
-        expect(day.part2(), 900);
-      });
+    test('.part1 1st example', () {
+      expect(day.part1(), 150);
+    });
+    test('.part2 1st example', () {
+      expect(day.part2(), 900);
     });
   });
 }

@@ -3,10 +3,18 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="AutoTestManager">
+    <enabled-run-configurations>
+      <run-configuration type="DartTestRunConfigurationType" name="Tests in advent-of-code-2021" />
+    </enabled-run-configurations>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b437197-7cf4-4447-8cb0-976eb179d3e2" name="Changes" comment="">
+    <list default="true" id="5b437197-7cf4-4447-8cb0-976eb179d3e2" name="Changes" comment="add Run tests to project">
+      <change afterPath="$PROJECT_DIR$/test/day03_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/dayxx_test.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/advent-of-code-2021.iml" beforeDir="false" afterPath="$PROJECT_DIR$/advent-of-code-2021.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/day01_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/day01_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/day02_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/day02_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +36,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -46,7 +62,6 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -56,10 +71,11 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="dart.settings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MiguelScudeller\Projects\advent-of-code\advent-of-code-2021\test" />
       <recent name="D:\Projects\advent-of-code\advent-of-code-2021\test" />
       <recent name="D:\Projects\advent-of-code\advent-of-code-2021\lib\days" />
     </key>
@@ -127,7 +143,7 @@
       <workItem from="1638376449509" duration="2518000" />
       <workItem from="1638386515335" duration="635000" />
       <workItem from="1638421344526" duration="3127000" />
-      <workItem from="1638453340033" duration="671000" />
+      <workItem from="1638453340033" duration="3454000" />
     </task>
     <task id="LOCAL-00001">
       <created>1638337364555</created>
@@ -136,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638337364555</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add Run tests to project">
+      <created>1638454148157</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1638454148157</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +178,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="add Run tests to project" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Run tests to project" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
