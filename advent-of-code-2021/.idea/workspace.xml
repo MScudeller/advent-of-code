@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b437197-7cf4-4447-8cb0-976eb179d3e2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/input/day02.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/day02_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../advent-of-code-2020/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../advent-of-code-2020/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/advent_of_code_2021.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/advent_of_code_2021.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/day02.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/day02.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/advent-of-code-2021.iml" beforeDir="false" afterPath="$PROJECT_DIR$/advent-of-code-2021.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +69,7 @@
       <recent name="D:\Projects\advent-of-code\advent-of-code-2021\bin\days" />
     </key>
   </component>
-  <component name="RunManager" selected="Dart Command Line App.advent_of_code_2021.dart">
+  <component name="RunManager" selected="Dart Test.Tests in advent-of-code-2021">
     <configuration name="advent_of_code_2021.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="filePath" value="$PROJECT_DIR$/bin/advent_of_code_2021.dart" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
@@ -101,19 +97,20 @@
       <option name="testName" value="day02_test.dart" />
       <method v="2" />
     </configuration>
-    <configuration name=".part1 1st example in day01_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/day01_test.dart" />
-      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
-      <option name="testName" value=".part1 1st example" />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Dart Command Line App.advent_of_code_2021.dart" />
+      <item itemvalue="Dart Test.Tests in advent-of-code-2021" />
+      <item itemvalue="Dart Test.Day01 in day01_test.dart" />
+      <item itemvalue="Dart Test.Day01 in day02_test.dart" />
+      <item itemvalue="Dart Test.Tests in day01_test.dart" />
+      <item itemvalue="Dart Test.Tests in day02_test.dart" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Dart Test.Tests in day02_test.dart" />
         <item itemvalue="Dart Test.Day01 in day02_test.dart" />
         <item itemvalue="Dart Test.Tests in day01_test.dart" />
         <item itemvalue="Dart Test.Day01 in day01_test.dart" />
-        <item itemvalue="Dart Test..part1 1st example in day01_test.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -130,6 +127,7 @@
       <workItem from="1638376449509" duration="2518000" />
       <workItem from="1638386515335" duration="635000" />
       <workItem from="1638421344526" duration="3127000" />
+      <workItem from="1638453340033" duration="671000" />
     </task>
     <task id="LOCAL-00001">
       <created>1638337364555</created>
