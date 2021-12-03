@@ -7,10 +7,7 @@
     <list default="true" id="5b437197-7cf4-4447-8cb0-976eb179d3e2" name="Changes" comment="add Run tests to project">
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/advent_of_code_2021.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/advent_of_code_2021.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/day03.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/day03.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/day03_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/day03_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
