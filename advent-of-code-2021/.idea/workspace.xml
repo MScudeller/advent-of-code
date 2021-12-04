@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b437197-7cf4-4447-8cb0-976eb179d3e2" name="Changes" comment="pre day 4 commit">
-      <change afterPath="$PROJECT_DIR$/input/day04.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/day04.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/day04.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/day04_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/day04_test.dart" afterDir="false" />
-    </list>
+    <list default="true" id="5b437197-7cf4-4447-8cb0-976eb179d3e2" name="Changes" comment="add day 4" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +76,7 @@
       <recent name="D:\Projects\advent-of-code\advent-of-code-2021\bin\days" />
     </key>
   </component>
-  <component name="RunManager" selected="Dart Command Line App.advent_of_code_2021.dart">
+  <component name="RunManager" selected="Dart Test.Tests in advent-of-code-2021">
     <configuration name="advent_of_code_2021.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="filePath" value="$PROJECT_DIR$/bin/advent_of_code_2021.dart" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
@@ -148,7 +143,7 @@
       <workItem from="1638386515335" duration="635000" />
       <workItem from="1638421344526" duration="3127000" />
       <workItem from="1638453340033" duration="3454000" />
-      <workItem from="1638593228747" duration="6824000" />
+      <workItem from="1638593228747" duration="7397000" />
     </task>
     <task id="LOCAL-00001">
       <created>1638337364555</created>
@@ -171,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638593674525</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add day 4">
+      <created>1638600677590</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1638600677590</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,24 +194,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add Run tests to project" />
     <MESSAGE value="pre day 4 commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="pre day 4 commit" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="Dart">
-          <condition expression="wonCount" language="Dart" />
-          <url>file://$PROJECT_DIR$/lib/src/day04.dart</url>
-          <line>46</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/src/day04.dart</url>
-          <line>50</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add day 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="add day 4" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
