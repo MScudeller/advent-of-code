@@ -47,6 +47,7 @@ abstract class Command {
   }
 
   Position run1(Position position);
+
   Position run2(Position position);
 }
 

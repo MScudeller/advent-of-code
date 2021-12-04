@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b437197-7cf4-4447-8cb0-976eb179d3e2" name="Changes" comment="add Run tests to project">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/day04_test.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/day03.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/day03.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/advent_of_code_2021.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/advent_of_code_2021.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/day04.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/day04.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +81,7 @@
       <recent name="D:\Projects\advent-of-code\advent-of-code-2021\bin\days" />
     </key>
   </component>
-  <component name="RunManager" selected="Dart Command Line App.advent_of_code_2021.dart">
+  <component name="RunManager" selected="Dart Test.Tests in advent-of-code-2021">
     <configuration name="advent_of_code_2021.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="filePath" value="$PROJECT_DIR$/bin/advent_of_code_2021.dart" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
@@ -147,6 +148,7 @@
       <workItem from="1638386515335" duration="635000" />
       <workItem from="1638421344526" duration="3127000" />
       <workItem from="1638453340033" duration="3454000" />
+      <workItem from="1638593228747" duration="389000" />
     </task>
     <task id="LOCAL-00001">
       <created>1638337364555</created>

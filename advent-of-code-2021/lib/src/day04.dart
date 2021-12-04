@@ -1,7 +1,7 @@
 import '../day.dart';
 
 class Day04 implements Day {
-  final List<String> _input; // ignore: unused_field
+  final List<String> _input;
 
   Day04(this._input);
 
