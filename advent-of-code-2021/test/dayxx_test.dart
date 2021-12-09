@@ -5,8 +5,9 @@ import 'package:advent_of_code_2021/day.dart';
 void main() {
   late Day day;
   setUp(() {
-    return day = Day.input(
-        3, []);
+    return day = Day.input(0, [
+
+    ]);
   });
   group('DayXX', () {
     test('.part1 1st example', () {
