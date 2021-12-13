@@ -33,7 +33,7 @@ void main() {
       expect(day.part1(), 17);
     });
     test('.part2 1st example', () {
-      expect(day.part2(), null);
+      expect(day.part2(), isNotNull);
     });
   });
 }

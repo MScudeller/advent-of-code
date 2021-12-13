@@ -48,8 +48,7 @@ class Day13 implements Day {
     for (var fold in folds.sublist(1)) {
       paper.fold(fold);
     }
-    print(paper);
-    return null;
+    return paper;
   }
 }
 
@@ -94,7 +93,7 @@ class Paper {
 
   @override
   String toString() {
-    return dots.map((e) => e.map((f) => f ? '#' : '.').join()).join("\n");
+    return dots.map((e) => e.map((f) => f ? '#' : ' ').join()).join("\n");
   }
 }
 
