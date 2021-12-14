@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b437197-7cf4-4447-8cb0-976eb179d3e2" name="Changes" comment="add day 4" />
+    <list default="true" id="5b437197-7cf4-4447-8cb0-976eb179d3e2" name="Changes" comment="Improve readability">
+      <change afterPath="$PROJECT_DIR$/input/day14.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/day14_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/advent_of_code_2021.dart" beforeDir="false" afterPath="$PROJECT_DIR$/bin/advent_of_code_2021.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/day14.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/day14.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,15 +65,16 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="dart.settings" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\MiguelScudeller\Projects\advent-of-code\advent-of-code-2021\test" />
       <recent name="D:\Projects\advent-of-code\advent-of-code-2021\test" />
+      <recent name="C:\Users\MiguelScudeller\Projects\advent-of-code\advent-of-code-2021\test" />
       <recent name="D:\Projects\advent-of-code\advent-of-code-2021\lib\days" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -76,36 +83,38 @@
       <recent name="D:\Projects\advent-of-code\advent-of-code-2021\bin\days" />
     </key>
   </component>
-  <component name="RunManager" selected="Dart Test.Tests in advent-of-code-2021">
+  <component name="RunManager" selected="Dart Command Line App.advent_of_code_2021.dart">
     <configuration name="advent_of_code_2021.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="filePath" value="$PROJECT_DIR$/bin/advent_of_code_2021.dart" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="Day01 in day02_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/day02_test.dart" />
+    <configuration name="Day11 in day11_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/day11_test.dart" />
       <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
-      <option name="testName" value="Day01" />
+      <option name="testName" value="Day11" />
       <method v="2" />
     </configuration>
-    <configuration name="Tests in day01_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/day01_test.dart" />
-      <option name="testName" value="day01_test.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Tests in day02_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/day02_test.dart" />
-      <option name="testName" value="day02_test.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name=".part1 1st example in day04_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/day04_test.dart" />
+    <configuration name="Day12 in day12_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/day12_test.dart" />
       <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
-      <option name="testName" value=".part1 1st example" />
+      <option name="testName" value="Day12" />
       <method v="2" />
     </configuration>
-    <configuration name=".part2 1st example in day03_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/day03_test.dart" />
+    <configuration name="Day13 in day13_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/day13_test.dart" />
+      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
+      <option name="testName" value="Day13" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Day14 in day14_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/day14_test.dart" />
+      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
+      <option name="testName" value="Day14" />
+      <method v="2" />
+    </configuration>
+    <configuration name=".part2 1st example in day12_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/day12_test.dart" />
       <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
       <option name="testName" value=".part2 1st example" />
       <method v="2" />
@@ -113,19 +122,19 @@
     <list>
       <item itemvalue="Dart Command Line App.advent_of_code_2021.dart" />
       <item itemvalue="Dart Test.Tests in advent-of-code-2021" />
-      <item itemvalue="Dart Test.Day01 in day02_test.dart" />
-      <item itemvalue="Dart Test.Tests in day01_test.dart" />
-      <item itemvalue="Dart Test.Tests in day02_test.dart" />
-      <item itemvalue="Dart Test..part2 1st example in day03_test.dart" />
-      <item itemvalue="Dart Test..part1 1st example in day04_test.dart" />
+      <item itemvalue="Dart Test.Day11 in day11_test.dart" />
+      <item itemvalue="Dart Test.Day12 in day12_test.dart" />
+      <item itemvalue="Dart Test..part2 1st example in day12_test.dart" />
+      <item itemvalue="Dart Test.Day13 in day13_test.dart" />
+      <item itemvalue="Dart Test.Day14 in day14_test.dart" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Dart Test..part1 1st example in day04_test.dart" />
-        <item itemvalue="Dart Test..part2 1st example in day03_test.dart" />
-        <item itemvalue="Dart Test.Tests in day02_test.dart" />
-        <item itemvalue="Dart Test.Day01 in day02_test.dart" />
-        <item itemvalue="Dart Test.Tests in day01_test.dart" />
+        <item itemvalue="Dart Test.Day14 in day14_test.dart" />
+        <item itemvalue="Dart Test.Day13 in day13_test.dart" />
+        <item itemvalue="Dart Test.Day12 in day12_test.dart" />
+        <item itemvalue="Dart Test..part2 1st example in day12_test.dart" />
+        <item itemvalue="Dart Test.Day11 in day11_test.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -144,6 +153,9 @@
       <workItem from="1638421344526" duration="3127000" />
       <workItem from="1638453340033" duration="3454000" />
       <workItem from="1638593228747" duration="7397000" />
+      <workItem from="1639285124567" duration="8142000" />
+      <workItem from="1639371226053" duration="5207000" />
+      <workItem from="1639458138767" duration="6460000" />
     </task>
     <task id="LOCAL-00001">
       <created>1638337364555</created>
@@ -173,7 +185,35 @@
       <option name="project" value="LOCAL" />
       <updated>1638600677590</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add day 11">
+      <created>1639207422697</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1639207422697</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add day 12">
+      <created>1639293325578</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1639293325578</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add day 13">
+      <created>1639376199598</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1639376199598</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Improve readability">
+      <created>1639376475301</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1639376475301</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +235,31 @@
     <MESSAGE value="add Run tests to project" />
     <MESSAGE value="pre day 4 commit" />
     <MESSAGE value="add day 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="add day 4" />
+    <MESSAGE value="Add day 11" />
+    <MESSAGE value="Add day 12" />
+    <MESSAGE value="Add day 13" />
+    <MESSAGE value="Improve readability" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improve readability" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/src/day14.dart</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="DartTestRunConfigurationType">
+        <watch expression="paper.toString()" language="Dart" />
+        <watch expression="temp.substring(i1+1, i1+2)" />
+      </configuration>
+      <configuration name="DartCommandLineRunConfigurationType">
+        <watch expression="printMatrix()" language="Dart" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
