@@ -1,3 +1,6 @@
+from aoc import get_input
+
+
 class Elf:
     number: int
     caloriesCarried: int = 0
@@ -6,12 +9,11 @@ class Elf:
         self.number = number
 
 
-file = open("inputs/day01", "r")
-lines = file.readlines()
+lines = get_input(1).splitlines()
 elves = []
 elf = Elf(0)
 for line in lines:
-    if line == "\n":
+    if line == "":
         elves.append(elf)
         elf = Elf(elf.number + 1)
     else:

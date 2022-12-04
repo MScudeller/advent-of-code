@@ -1,6 +1,6 @@
-file = open("inputs/day02", "r")
-lines = file.readlines()
+from aoc import get_input
 
+lines = get_input(2).splitlines()
 
 def my_play(line: str): return {'X': 1, 'Y': 2, 'Z': 3, }.get(line[2])
 

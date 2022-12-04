@@ -1,10 +1,11 @@
-file = open("inputs/day01", "r")
-lines = file.readlines()
+from aoc import get_input
+
+lines = get_input(1).splitlines()
 
 elves = []
 elf = 0
 for line in lines:
-    if line == "\n":
+    if line == "":
         elves.append(elf)
         elf = 0
     else:
@@ -16,4 +17,3 @@ elves.sort(reverse=True, key=lambda e: e[1])
 
 print(elves[0][1])
 print(elves[0][1]+elves[1][1]+elves[2][1])
-print(sum(map(lambda e: e[1], elves[:3])))

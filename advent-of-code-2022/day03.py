@@ -1,5 +1,6 @@
-file = open("inputs/day03", "r")
-lines = file.readlines()
+from aoc import get_input
+
+lines = get_input(3).splitlines()
 
 
 def split_compartments(line: str) -> (str, str):

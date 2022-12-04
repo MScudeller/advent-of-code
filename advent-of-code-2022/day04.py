@@ -1,9 +1,10 @@
-file = open("inputs/day04", "r")
-lines = file.readlines()
+from aoc import get_input
+
+lines = get_input(4).splitlines()
 
 
 def split_sets(line):
-    elves = line.strip().split(",")
+    elves = line.split(",")
     elf1_sectors = elves[0].split("-")
     elf1 = set(range(int(elf1_sectors[0]), int(elf1_sectors[1]) + 1))
     elf2_sectors = elves[1].split("-")
