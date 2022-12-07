@@ -27,21 +27,20 @@ lines = get_input(7).splitlines()
 #          "7214296 k",
 #          ]
 
-commands = [(lines[i], i) for i in range(0, len(lines)) if lines[i].startswith("$")]
+
+commands = [i for i in enumerate(lines) if i[1].startswith("$")]
 
 
 def func(i: int):
-    start = commands[i][1]
-    end = commands[i + 1][1] if i != len(commands) - 1 else len(lines)
+    start = commands[i][0]
+    end = commands[i + 1][0] if i != len(commands) - 1 else len(lines)
     return lines[start:end]
 
 
-commands2 = [func(i) for i in range(len(commands))]
+commands2 = [func(i[0]) for i in enumerate(commands)]
 
 folders = {}
-
 current = ''
-
 for command in commands2:
     if command[0].startswith("$ cd /"):
         current = ''
@@ -50,12 +49,11 @@ for command in commands2:
     elif command[0].startswith("$ cd "):
         current = f"{current}/{command[0][5:]}"
     elif command[0].startswith("$ ls"):
-        foo = command[1:]
-        file_sum = sum([int(file.split(" ")[0]) for file in foo if not file.startswith("dir")])
+        result = command[1:]
+        file_sum = sum([int(file.split(" ")[0]) for file in result if not file.startswith("dir")])
         for key in folders.keys():
             if current.startswith(key):
                 folders.update({key: folders.get(key) + file_sum})
-
         folders.update({current: file_sum})
 
 print(sum([folder for folder in folders.values() if folder <= 100000]))
