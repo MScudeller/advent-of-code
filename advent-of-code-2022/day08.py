@@ -63,6 +63,7 @@ for k in enumerate(lines):
             foo.append(1)
 
 print(sum(foo))
+print(sum(1 for k, value in enumerate(lines) for m, _ in enumerate(value) if check_tree_visibility(k, m)))
 
 
 def count_tree_visibility(x: int, y: int):
@@ -113,9 +114,10 @@ def count_tree_visibility(x: int, y: int):
 
 
 bar = []
-for k in enumerate(lines):
-    for m in enumerate(k[1]):
-        bar.append(count_tree_visibility(k[0], m[0]))
+for k, value in enumerate(lines):
+    for m in range(len(value)):
+        bar.append(count_tree_visibility(k, m))
 
 print(max(bar))
+print(max(count_tree_visibility(k, m) for k, value in enumerate(lines) for m in range(len(value))))
 pass
