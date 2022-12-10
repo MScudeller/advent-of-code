@@ -151,7 +151,7 @@ lines = get_input(10).splitlines()
 #     "noop",
 # ]
 
-clock = 1
+clock = 0
 x = 1
 strengths = 0
 ctr = [["." for i in range(40)] for j in range(6)]
@@ -160,9 +160,9 @@ ctr = [["." for i in range(40)] for j in range(6)]
 def draw_on_ctr():
     cycle = clock % 240
     row = int(cycle / 40)
-    column = (cycle % 40) - 1
-    sprite = (x % 40) - 1
-    ctr[row][column] = "🟩" if sprite <= column <= sprite + 2 else "🟫"
+    column = (cycle % 40)
+    sprite = x
+    ctr[row][column] = "🟩" if sprite - 1 <= column <= sprite + 1 else "🟫"
 
 
 def print_on_signal():
@@ -173,8 +173,6 @@ def print_on_signal():
 
 
 for line in lines:
-    print_on_signal()
-    draw_on_ctr()
     if line == "noop":
         clock += 1
     elif line.startswith("addx"):
@@ -184,8 +182,11 @@ for line in lines:
         draw_on_ctr()
         x += int(command[1])
         clock += 1
+    print_on_signal()
+    draw_on_ctr()
 
 print(strengths)
 
+ctr[-1][-1] = "🟩"
 print("\n".join("".join(pixel) for pixel in ctr))
 pass
