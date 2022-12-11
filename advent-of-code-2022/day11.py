@@ -52,7 +52,6 @@ def parse_monkeys(input):
 
 def run(monkeys, stop, worry_modifier):
     for j in range(stop):
-        pass
         for m in monkeys:
             for item in m[0]:
                 value = item if m[2] == "old" else int(m[2])
@@ -76,4 +75,3 @@ run(monkeys, 20, lambda x: x//3)
 monkeys = parse_monkeys(lines)
 mmc = math.prod(m[3] for m in monkeys)
 run(monkeys, 10000, lambda x: x % mmc)
-pass
