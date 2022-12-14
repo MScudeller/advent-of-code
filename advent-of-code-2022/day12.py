@@ -1,10 +1,11 @@
 import os
-import time
 
+import matplotlib.pyplot as plt
 import numpy as np
+from colorama import Fore
 
 from aoc import get_input
-from colorama import Fore, Back, Style
+
 
 def get_example():
     return [
@@ -42,7 +43,7 @@ def run_part_1():
         current_height = parse_height(current_x, current_y, terrain)
         possible_next = [node for node in all_next if filter_next(current_height, node, terrain, visited, queue)]
         queue.extend(possible_next)
-        # print_terrain(terrain, visited, queue)
+        print_terrain(terrain, visited, queue)
 
 
 def parse_height(current_x, current_y, terrain):
@@ -65,10 +66,19 @@ def filter_next(current_height, node, terrain, visited, queue):
     not_in_queue = not (node[0], node[1]) in [(q[0], q[1]) for q in queue]
     return inside_bounds and not_higher and not_visited and not_in_queue
 
-
+number = 0
 def print_terrain(terrain, visited, queue):
-    os.system('cls')
-    print("\n".join("".join(get_position_color(terrain, visited, queue, line[0], c[0]) for c in enumerate(line[1])) for line in enumerate(terrain)))
+    global number
+    foo = [[ord(c) - ord("a") for c in line] for line in terrain]
+    bar = np.add(foo, visited * 10)
+    np.clip(bar, 0, 30)
+    fig, ax = plt.subplots()
+    plt.axis("off")
+    im = ax.imshow(bar)
+    fig.tight_layout()
+    plt.savefig(f"images/{number:04d}.png", bbox_inches="tight")
+    plt.close(fig)
+    number += 1
 
 
 def get_position_color(terrain: list[str], visited, queue, x, y):
