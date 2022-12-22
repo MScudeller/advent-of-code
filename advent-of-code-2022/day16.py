@@ -1,6 +1,34 @@
 import functools
+# import networkx as nx
+# import matplotlib.pyplot as plt
 
 from aoc import get_input
+
+
+# class GraphVisualization:
+#     def __init__(self):
+#         self.visual = []
+#
+#     def addEdge(self, a, b):
+#         temp = [a, b]
+#         self.visual.append(temp)
+#
+#     def visualize(self):
+#         G = nx.Graph()
+#         G.add_edges_from(self.visual)
+#         nx.draw_networkx(G)
+#         plt.show()
+#
+#
+# # Driver code
+# G = GraphVisualization()
+# G.addEdge(0, 2)
+# G.addEdge(1, 2)
+# G.addEdge(1, 3)
+# G.addEdge(5, 3)
+# G.addEdge(3, 4)
+# G.addEdge(1, 0)
+# G.visualize()
 
 
 class Valve:
@@ -8,6 +36,9 @@ class Valve:
     flow_rate: int
     leads_to: list
     is_open: bool
+
+    def __str__(self) -> str:
+        return self.name
 
     def __init__(self, name, flow_rate):
         self.name = name
@@ -20,17 +51,28 @@ class Valve:
             self.leads_to.append(valve)
             valve.leads_to.append(self)
 
-    def max_value(self, hop: int, pre_visited: set):
-        value = 0 if self.is_open or self in pre_visited else (self.flow_rate * hop)
-        visited = pre_visited.copy()
-        visited.add(self)
-        next_valves = [v for v in self.leads_to if v not in visited]
-        if len(next_valves) == 0:
-            return self, value, hop
+    def max_next(self, graph_size):
+        visited = []
+        queue = [(self, 0)]
 
-        valves = [valve.max_value(hop - 1, visited) for valve in next_valves]
-        valves.append((self, value, hop))
-        return max(valves, key=lambda v: v[1])
+        def in_visited(node): return node in (n for n, _ in visited)
+
+        def in_queue(node): return node in (n for n, _ in queue)
+
+        def compare(a, b):
+            num = max(a[1], b[1]) + 1
+            a_ = 0 if a[0].is_open else a[0].flow_rate * (num - a[1])
+            b_ = 0 if b[0].is_open else b[0].flow_rate * (num - b[1])
+            return a_ - b_
+
+        while len(queue) != 0:
+            current, dist = queue.pop(0)
+            value = 0 if current.is_open else ((graph_size - dist) * current.flow_rate)
+            visited.append([current, dist])
+            possible_next = [(node, dist + 1) for node in current.leads_to if
+                             not in_visited(node) and not in_queue(node)]
+            queue.extend(possible_next)
+        return max(visited, key=functools.cmp_to_key(lambda a, b: compare(a, b)))
 
 
 def get_example():
@@ -51,7 +93,7 @@ def get_example():
 def parse_valve(line):
     split = line.split(" ")
     name = split[1]
-    flow_rate = int(split[4][5:len(split[4])-1])
+    flow_rate = int(split[4][5:len(split[4]) - 1])
     if len(line.split("tunnels lead to valves")) > 1:
         leads_to = [lead.strip() for lead in line.split("tunnels lead to valves")[1].split(",")]
     else:
@@ -100,13 +142,21 @@ def run_part_1():
 
 
 def run_part_1a():
-    # lines = get_input(16).splitlines()
-    lines = get_example()
+    lines = get_input(16).splitlines()
+    # lines = get_example()
     valves = parse_valves(lines)
+    graph_size = len(valves)
     current = valves["AA"]
-    total_pressure_released = current.max_value(30, set())
-    print(total_pressure_released)
+    total = 0
+    i = 1
+    while i <= 30:
+        current, value = current.max_next(graph_size)
+        i += 1 + value
+        total += sum(valve.flow_rate for valve in valves.values() if valve.is_open) * (value + 1)
+        if current.flow_rate > 0:
+            current.is_open = True
 
+    print(total)
 
 
 def run_part_2():
