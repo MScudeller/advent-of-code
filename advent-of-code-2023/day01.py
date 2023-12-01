@@ -2,7 +2,6 @@ from aoc import get_input
 
 lines = get_input(1).splitlines()
 
-calibrationLine = []
 summed = 0
 for line in lines:
     neo = line.replace("one", "o1ne").replace("two", "t2wo").replace("three", "th3ree").replace("four", "fo4ur").replace("five", "fi5ve").replace("six", "s6ix").replace("seven", "sev7en").replace("eight", "ei8ght").replace("nine", "ni9ne")
@@ -17,7 +16,6 @@ for line in lines:
             last = int(char)
             break
     lineNumber = (start * 10) + last
-    calibrationLine.append(lineNumber)
     summed += lineNumber
 
 print(summed)
