@@ -33,6 +33,7 @@ if not YEAR:
         str(datetime.now().year))
 YEAR = int(YEAR.strip())
 
+
 def get_input(day: int, year: int = YEAR, overwrite: bool = False):
     """
     Usage:
