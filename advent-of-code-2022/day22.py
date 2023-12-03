@@ -100,10 +100,94 @@ def run_part_1():
     print(1000 * (y + 1) + 4 * (x + 1) + direction)
 
 
+def follow_instructions_cube(chart, instructions):
+    chunk_size = 50
+    y = 0
+    x = chart[y].index(".")
+    direction = 0  # right
+    index = 0
+    while index < len(instructions):
+        instruction, index = next_instruction(instructions, index)
+        if instruction == "R":
+            direction = (direction + 1) % 4
+        elif instruction == "L":
+            direction = (direction - 1) % 4
+        else:
+            for i in range(instruction):
+                if direction == 0:  # right
+                    right_x = (x + 1)
+                    right_y = y
+                    right_direction = direction
+                    if right_x == len(chart[y]):
+                        # if out 2R: in 5L
+                        if x // chunk_size == 2 and y // chunk_size == 0:
+                            right_x = x - chunk_size
+                            right_y = chunk_size * 3 - 1 - y
+                            right_direction = 2
+                        # if out 3R: in 2U
+                        if x // chunk_size == 1 and y // chunk_size == 1:
+                            right_x = y + chunk_size
+                            right_y = chunk_size - 1
+                            right_direction = 3
+                        # if out 5R: in 2L
+                        if x // chunk_size == 1 and y // chunk_size == 2:
+                            right_x = x + chunk_size
+                            right_y = chunk_size - 1 - (y - 2 * chunk_size)  # 0 -> 49, 49 -> 0
+                            right_direction = 2
+                        # if out 6R: in 5U
+                        pass
+                    if chart[right_y][right_x] == "#":
+                        break
+                    x = right_x
+                    y = right_y
+                    direction = right_direction
+                elif direction == 1:  # down
+                    down_x = x
+                    down_y = y + 1
+                    down_direction = direction
+                    if down_y == len(chart):
+                        # compute next position
+                        pass
+                    if chart[down_y][down_x] == "#":
+                        break
+                    y = down_y
+                    x = down_x
+                    direction = down_direction
+                elif direction == 2:  # left
+                    left_x = (x - 1)
+                    left_y = y
+                    left_direction = direction
+                    if left_x == -1 or chart[left_y][left_x] == " ":
+                        # compute next position
+                        pass
+                    if chart[left_y][left_x] == "#":
+                        break
+                    x = left_x
+                    y = left_y
+                    direction = left_direction
+                else:  # 3 up
+                    up_x = x
+                    up_y = y - 1
+                    up_direction = direction
+                    if up_y == -1 or chart[up_y][up_x] == " ":
+                        # compute next position
+                        pass
+                    if chart[up_y][up_x] == "#":
+                        break
+                    y = up_y
+                    x = up_x
+                    direction = up_direction
+
+    return x, y, direction
+
+
 def run_part_2():
-    # lines = get_input(22).splitlines()
-    lines = get_example()
-    parsed_file = parse_notes(lines)
+    lines = get_input(22).splitlines()
+    # lines = get_example()
+    chart, instructions = parse_notes(lines)
+    x, y, direction = follow_instructions_cube(chart, instructions)
+    print(1000 * (y + 1) + 4 * (x + 1) + direction)
+
 
 
 run_part_1()
