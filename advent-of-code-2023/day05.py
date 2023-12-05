@@ -42,7 +42,7 @@ initial_seeds = [int(s) for s in almanac[0].split("ds: ")[1].split(" ")]
 def map_seed(numbers_str, seed):
     numbers = [int(n) for n in numbers_str.split(" ")]
     if numbers[1] <= seed <= numbers[1] + numbers[2]:
-        return numbers[0]+seed-numbers[1], True
+        return numbers[0] + seed - numbers[1], True
 
     return seed, False
 
@@ -71,6 +71,7 @@ def run_almanac(seeds):
 seeds_part1 = initial_seeds.copy()
 print("part 1")
 print(run_almanac(seeds_part1))
+
 
 def map_seed2(numbers, seed):
     if seed[2]:
@@ -132,6 +133,6 @@ seeds_part1_for_part2 = [(initial_seeds[i], 1, False) for i in range(int(len(ini
 print("part 1 done with part 2 code:")
 print(run_almanac2(seeds_part1_for_part2))
 
-seeds_part2 = [(initial_seeds[i*2], initial_seeds[i*2+1], False) for i in range(int(len(initial_seeds)/2))]
+seeds_part2 = [(initial_seeds[i * 2], initial_seeds[i * 2 + 1], False) for i in range(int(len(initial_seeds) / 2))]
 print("part 2")
 print(run_almanac2(seeds_part2))
