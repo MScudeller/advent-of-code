@@ -36,83 +36,102 @@ from aoc import get_input
 
 day_input = get_input(5)
 almanac = day_input.split("\n\n")
+initial_seeds = [int(s) for s in almanac[0].split("ds: ")[1].split(" ")]
 
 
 def map_seed(numbers_str, seed):
     numbers = [int(n) for n in numbers_str.split(" ")]
     if numbers[1] <= seed <= numbers[1] + numbers[2]:
         return numbers[0]+seed-numbers[1], True
+
     return seed, False
 
 
 def run_map(step: str, seeds: list[int]):
-    foo = step.splitlines()
-
-    bar: list[int] = []
-    for s in seeds:
-        for f in foo[1:]:
-            s, seed_changed = map_seed(f, s)
+    map_lines = step.splitlines()[1:]
+    next_seeds: list[int] = []
+    for seed in seeds:
+        for map_line in map_lines:
+            seed, seed_changed = map_seed(map_line, seed)
             if seed_changed:
                 break
-        bar.append(s)
-    return bar
+
+        next_seeds.append(seed)
+
+    return next_seeds
 
 
-initial_seeds = [int(s) for s in almanac[0].split("ds: ")[1].split(" ")]
+def run_almanac(seeds):
+    for almanac_step in almanac[1:]:
+        seeds = run_map(almanac_step, seeds)
+
+    return min(seeds)
+
+
 seeds_part1 = initial_seeds.copy()
+print("part 1")
+print(run_almanac(seeds_part1))
 
-for almanac_step in almanac[1:]:
-    seeds_part1 = run_map(almanac_step, seeds_part1)
-
-print(min(seeds_part1))
-
-
-def map_seed2(numbers_str, seed):
+def map_seed2(numbers, seed):
     if seed[2]:
         return [seed]
-    numbers = [int(n) for n in numbers_str.split(" ")]
+
     seed_start = seed[0]
     seed_end = seed_start + seed[1] - 1
     map_start = numbers[1]
     map_end = map_start + numbers[2] - 1
-    if map_start <= seed_start <= seed_end <= map_end:  # whole seed inside map - done
-        return [(numbers[0] + seed_start - map_start, seed[1], True)]
+    conversion = numbers[0] - map_start
 
-    if seed_start < map_start <= seed_end <= map_end:  # seed partially inside map starting before - missing map calc
-        return [(seed_start, map_start - seed_start, False), (numbers[0], seed_end - map_start, True)]
+    # whole seed inside map
+    if map_start <= seed_start <= seed_end <= map_end:
+        return [(seed_start + conversion, seed[1], True)]
 
-    if map_start <= seed_start <= map_end <= seed_end:  # seed partially inside ending after - done
-        return [(numbers[0] + seed_start - map_start, map_end - seed_start, True), (map_end, seed_end - map_end, False)]
+    # seed partially inside map starting before
+    if seed_start < map_start <= seed_end <= map_end:
+        return [(seed_start, map_start - seed_start - 1, False),
+                (map_start + conversion, seed_end - map_start + 1, True)]
 
-    if seed_start <= map_start <= map_end <= seed_end:  # whole map inside seed - missing map calc
-        return [(seed_start, map_start - seed_start, False),
-                (numbers[0], map_end - map_start, True),
-                (map_end, seed_end - map_end, False)]
+    # seed partially inside ending after
+    if map_start <= seed_start <= map_end <= seed_end:
+        return [(seed_start + conversion, map_end - seed_start + 1, True),
+                (map_end, seed_end - map_end + 1, False)]
 
-    # if seed_end <= map_start or map_end <= seed_start:  # whole seed outside map up or down
+    # whole map inside seed
+    if seed_start <= map_start <= map_end <= seed_end:
+        return [(seed_start, map_start - seed_start - 1, False),
+                (map_start + conversion, map_end - map_start + 1, True),
+                (map_end + 1, seed_end - map_end, False)]
+
+    # whole seed outside map
     return [seed]
 
 
 def run_map2(step: str, seeds: list[(int, int)]):
-    foo = step.splitlines()
-    seeds2 = []
-    for f in foo[1:]:
-        for s in seeds:
-            splits = map_seed2(f, s)
-            seeds2.extend(splits)
-        seeds = seeds2.copy()
-        seeds2 = []
+    map_lines = step.splitlines()[1:]
+    next_seeds = []
+    for map_line in map_lines:
+        map_numbers = [int(n) for n in map_line.split(" ")]
+        for seed in seeds:
+            splits = map_seed2(map_numbers, seed)
+            next_seeds.extend(splits)
+
+        seeds = next_seeds.copy()
+        next_seeds = []
+
     return [(s[0], s[1], False) for s in seeds]
 
 
-seeds_part2 = [(initial_seeds[i], initial_seeds[i+1], False) for i in range(int(len(initial_seeds)/2))]
-# seeds_part2 = [(initial_seeds[i], 1, False) for i in range(int(len(initial_seeds)))]
-print(seeds_part2)
+def run_almanac2(seeds):
+    for step in almanac[1:]:
+        seeds = run_map2(step, seeds)
 
-for almanac_step in almanac[1:]:
-    seeds_part2 = run_map2(almanac_step, seeds_part2)
-    print(seeds_part2)
+    return min(map(lambda x: x[0], seeds))
 
 
-print(min(map(lambda x: x[0], seeds_part2)))
+seeds_part1_for_part2 = [(initial_seeds[i], 1, False) for i in range(int(len(initial_seeds)))]
+print("part 1 done with part 2 code:")
+print(run_almanac2(seeds_part1_for_part2))
 
+seeds_part2 = [(initial_seeds[i*2], initial_seeds[i*2+1], False) for i in range(int(len(initial_seeds)/2))]
+print("part 2")
+print(run_almanac2(seeds_part2))
