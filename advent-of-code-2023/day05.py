@@ -1,6 +1,6 @@
 from aoc import get_input
 
-day_input = """seeds: 79 1 14 1 55 1 13 1
+day_input = """seeds: 79 14 55 13
 
 seed-to-soil map:
 50 98 2
@@ -35,7 +35,7 @@ humidity-to-location map:
 56 93 4"""
 
 # day_input = get_input(5)
-maps = day_input.split("\n\n")
+almanac = day_input.split("\n\n")
 
 
 def map_seed(numbers_str, seed):
@@ -45,8 +45,8 @@ def map_seed(numbers_str, seed):
     return seed, False
 
 
-def run_map(mapa: str, seeds: list[int]):
-    foo = mapa.splitlines()
+def run_map(step: str, seeds: list[int]):
+    foo = step.splitlines()
 
     bar: list[int] = []
     for s in seeds:
@@ -58,12 +58,12 @@ def run_map(mapa: str, seeds: list[int]):
     return bar
 
 
-seeds = [int(s) for s in maps[0].split("ds: ")[1].split(" ")]
+seeds_part1 = [int(s) for s in almanac[0].split("ds: ")[1].split(" ")]
 
-for mapa in maps[1:]:
-    seeds = run_map(mapa, seeds)
+for almanac_step in almanac[1:]:
+    seeds_part1 = run_map(almanac_step, seeds_part1)
 
-print(min(seeds))
+print(min(seeds_part1))
 
 
 def map_seed2(numbers_str, seed):
@@ -92,8 +92,8 @@ def map_seed2(numbers_str, seed):
     return [seed]
 
 
-def run_map2(mapa: str, seeds: list[(int, int)]):
-    foo = mapa.splitlines()
+def run_map2(step: str, seeds: list[(int, int)]):
+    foo = step.splitlines()
     seeds2 = []
     for f in foo[1:]:
         for s in seeds:
@@ -104,11 +104,12 @@ def run_map2(mapa: str, seeds: list[(int, int)]):
     return seeds
 
 
-seeds2 = [(seeds[i], seeds[i+1], False) for i in range(int(len(seeds)/2))]
+# seeds_part2 = [(seeds[i], seeds[i+1], False) for i in range(int(len(seeds)/2))]
+seeds_part2 = [(seeds_part1[i], 1, False) for i in range(int(len(seeds_part1)))]
 
-for mapa in maps[1:]:
-    seeds2 = run_map2(mapa, seeds2)
+for almanac_step in almanac[1:]:
+    seeds_part2 = run_map2(almanac_step, seeds_part2)
 
 
-print(min(map(lambda x: x[0], seeds2)))
+print(min(map(lambda x: x[0], seeds_part2)))
 
