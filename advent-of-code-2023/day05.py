@@ -1,40 +1,40 @@
 from aoc import get_input
 
-day_input = """seeds: 79 14 55 13
+# day_input = """seeds: 79 14 55 13
+#
+# seed-to-soil map:
+# 50 98 2
+# 52 50 48
+#
+# soil-to-fertilizer map:
+# 0 15 37
+# 37 52 2
+# 39 0 15
+#
+# fertilizer-to-water map:
+# 49 53 8
+# 0 11 42
+# 42 0 7
+# 57 7 4
+#
+# water-to-light map:
+# 88 18 7
+# 18 25 70
+#
+# light-to-temperature map:
+# 45 77 23
+# 81 45 19
+# 68 64 13
+#
+# temperature-to-humidity map:
+# 0 69 1
+# 1 0 69
+#
+# humidity-to-location map:
+# 60 56 37
+# 56 93 4"""
 
-seed-to-soil map:
-50 98 2
-52 50 48
-
-soil-to-fertilizer map:
-0 15 37
-37 52 2
-39 0 15
-
-fertilizer-to-water map:
-49 53 8
-0 11 42
-42 0 7
-57 7 4
-
-water-to-light map:
-88 18 7
-18 25 70
-
-light-to-temperature map:
-45 77 23
-81 45 19
-68 64 13
-
-temperature-to-humidity map:
-0 69 1
-1 0 69
-
-humidity-to-location map:
-60 56 37
-56 93 4"""
-
-# day_input = get_input(5)
+day_input = get_input(5)
 almanac = day_input.split("\n\n")
 
 
@@ -58,7 +58,8 @@ def run_map(step: str, seeds: list[int]):
     return bar
 
 
-seeds_part1 = [int(s) for s in almanac[0].split("ds: ")[1].split(" ")]
+initial_seeds = [int(s) for s in almanac[0].split("ds: ")[1].split(" ")]
+seeds_part1 = initial_seeds.copy()
 
 for almanac_step in almanac[1:]:
     seeds_part1 = run_map(almanac_step, seeds_part1)
@@ -71,9 +72,9 @@ def map_seed2(numbers_str, seed):
         return [seed]
     numbers = [int(n) for n in numbers_str.split(" ")]
     seed_start = seed[0]
-    seed_end = seed_start + seed[1]
+    seed_end = seed_start + seed[1] - 1
     map_start = numbers[1]
-    map_end = map_start + numbers[2]
+    map_end = map_start + numbers[2] - 1
     if map_start <= seed_start <= seed_end <= map_end:  # whole seed inside map - done
         return [(numbers[0] + seed_start - map_start, seed[1], True)]
 
@@ -101,14 +102,16 @@ def run_map2(step: str, seeds: list[(int, int)]):
             seeds2.extend(splits)
         seeds = seeds2.copy()
         seeds2 = []
-    return seeds
+    return [(s[0], s[1], False) for s in seeds]
 
 
-# seeds_part2 = [(seeds[i], seeds[i+1], False) for i in range(int(len(seeds)/2))]
-seeds_part2 = [(seeds_part1[i], 1, False) for i in range(int(len(seeds_part1)))]
+seeds_part2 = [(initial_seeds[i], initial_seeds[i+1], False) for i in range(int(len(initial_seeds)/2))]
+# seeds_part2 = [(initial_seeds[i], 1, False) for i in range(int(len(initial_seeds)))]
+print(seeds_part2)
 
 for almanac_step in almanac[1:]:
     seeds_part2 = run_map2(almanac_step, seeds_part2)
+    print(seeds_part2)
 
 
 print(min(map(lambda x: x[0], seeds_part2)))
