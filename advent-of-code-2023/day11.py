@@ -14,13 +14,11 @@ day_input = get_input(11)
 
 
 def prepare_map(inp: str, qty: int):
-    foo = qty - 1
     input_map = [[(c, 1) for c in list(line)] for line in inp.splitlines()]
     for i in range(len(input_map))[::-1]:
         if all([c == "." for c, _ in input_map[i]]):
-            for f in input_map[i]:
-                input_map.pop(i)
-                input_map.insert(i, [(".", qty)] * len(input_map[i]))
+            input_map.pop(i)
+            input_map.insert(i, [(".", qty)] * len(input_map[i]))
 
     for j in range(len(input_map[0]))[::-1]:
         column = [input_map[i][j] for i in range(len(input_map))]
@@ -68,4 +66,3 @@ print(run(day_input, 2))
 print(run(example_input, 10))
 print(run(example_input, 100))
 print(run(day_input, 1000000))
-
