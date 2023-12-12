@@ -1,3 +1,5 @@
+import time
+
 from aoc import get_input
 
 # day_input = """seeds: 79 14 55 13
@@ -68,9 +70,12 @@ def run_almanac(seeds):
     return min(seeds)
 
 
+start = time.time()
 seeds_part1 = initial_seeds.copy()
 print("part 1")
 print(run_almanac(seeds_part1))
+end = time.time()
+print(end - start)
 
 
 def map_seed2(numbers, seed):
@@ -129,10 +134,19 @@ def run_almanac2(seeds):
     return min(map(lambda x: x[0], seeds))
 
 
+start = time.time()
 seeds_part1_for_part2 = [(initial_seeds[i], 1, False) for i in range(int(len(initial_seeds)))]
 print("part 1 done with part 2 code:")
 print(run_almanac2(seeds_part1_for_part2))
+end = time.time()
+print(end - start)
 
+
+start = time.time()
 seeds_part2 = [(initial_seeds[i * 2], initial_seeds[i * 2 + 1], False) for i in range(int(len(initial_seeds) / 2))]
 print("part 2")
 print(run_almanac2(seeds_part2))
+end = time.time()
+elapsed_time = end - start
+print(f"{elapsed_time}s")
+print(f"{elapsed_time*1000}ms")
